@@ -37,11 +37,15 @@ const Note = () => {
   }
 
   const handleDeletNote = (index) => {
-    console.log(`Note with index ${index} is deleted`);
+    // console.log(`Note with index ${index} is deleted`);
 
-    // let newNotes = notes;
+    const div = document.getElementById(`${index}`)
 
-    const deletedNotes = notes.splice(index, 1);
+    // console.log(div);
+
+    div.style.display = 'none';
+
+    let deletedNotes = notes.splice(index, 1);
     const newNotes = notes;
     console.log('Nw Note: ', newNotes);
 
@@ -59,12 +63,9 @@ const Note = () => {
             <label className='mt-3'>Note: </label>
             <textarea id='noteInput' rows="4" cols="39" className='w-[300px] rounded-sm text-slate-900 px-2'></textarea>
           </div>
-
-
           <button className='mt-5 relative left-[118px] border px-2 py-1 rounded-md hover:bg-slate-200 hover:text-black' onClick={(e) => HandleSubmitNote(e)}>Add Note</button>
         </form>
       </div>
-      <h2>My Notes</h2>
       {renderNotes()}
     </>
   )

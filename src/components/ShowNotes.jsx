@@ -4,7 +4,7 @@ const ShowNotes = ({ index, title, note, handleDeletNote }) => {
 
   return (
     <>
-      <div id='' className='flex border flex-col items-center p-5 rounded-md mb-10 lg:w-[350px] md:w-[300px] w-[280px]'>
+      <div id={`${index}`} className='flex border flex-col items-center p-5 rounded-md mb-10 lg:w-[350px] md:w-[300px] w-[280px]'>
         <p className='text-xl mb-4'>{title}</p>
         <p>{note}</p>
         <div className='relative mt-10 mb-3 w-full h-[2px] bg-white'></div>
