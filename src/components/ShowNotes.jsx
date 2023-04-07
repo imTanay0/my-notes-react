@@ -1,20 +1,16 @@
 import React from 'react'
 
-const ShowNotes = ({ title, note }) => {
-
-  if (title === "" && note === "") {
-    return (
-      <>
-        <p className='text-center'>No Notes Available... Create a New Note</p>
-      </>
-    )
-  }
+const ShowNotes = ({ index, title, note, handleDeletNote }) => {
 
   return (
-    <div className='flex border flex-col items-center w-[350px] p-5 rounded-md'>
-      <p className='text-xl mb-3'>{title}</p>
-      <p>{note}</p>
-    </div>
+    <>
+      <div id='' className='flex border flex-col items-center p-5 rounded-md mb-10 lg:w-[350px] md:w-[300px] w-[280px]'>
+        <p className='text-xl mb-4'>{title}</p>
+        <p>{note}</p>
+        <div className='relative mt-10 mb-3 w-full h-[2px] bg-white'></div>
+        <button className='border rounded-sm px-3 py-1 mt-3' onClick={() => handleDeletNote(index)}>Delete Note</button>
+      </div>
+    </>
   )
 }
 
