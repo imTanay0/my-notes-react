@@ -1,6 +1,4 @@
-# my-notes-react
-
-## Overview
+# Overview
 
 This is a Simple Note Taking App. 
 
