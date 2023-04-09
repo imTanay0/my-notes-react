@@ -1,5 +1,9 @@
 # my-notes-react
 
+## Overview
+
+This is a Simple Note Taking App. 
+
 ## Techs
 
 - Vite
