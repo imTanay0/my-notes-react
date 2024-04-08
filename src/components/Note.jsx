@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { v4 as uuidv4 } from "uuid"
+
 import ShowNotes from './ShowNotes';
 
 const Note = () => {
-
   const [newTitle, setNewTitle] = useState('');
   const [newContent, setNewContent] = useState('');
   const [notes, setNotes] = useState(() => {
@@ -34,7 +35,7 @@ const Note = () => {
         return [
           ...currentNotes,
           {
-            id: crypto.randomUUID(),
+            id: uuidv4(),
             title: newTitle,
             note: newContent
           }
