@@ -18,6 +18,8 @@ This is a Simple Note Taking App.
 
 -- Update the package.json and add "--host" in the dev stage (I HAVE UPDATED)
 
+-- Create the build folder first then run docker command to build the image, so that only build folder will be copied without any error.
+
 -- Build the image from the Dockerfile and run the container on port 5173.
 
 ## To add reverse proxy (optional, run your application without opening the port)
